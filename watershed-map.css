@@ -1,0 +1,277 @@
+#container.embed {
+    height: 100%;
+}
+
+/* explanation styles */
+#explanation {
+	width: 300px;
+	height: 100%;
+	position: absolute;
+}
+
+#explanation h3 {
+	font-size: 18px;
+}
+
+/* explanation layers styles */
+#explanation-controls {
+	height: auto!important;
+}
+
+#explanation-controls ul { 
+	padding: 0;
+	list-style: none; 
+	display: inline;
+	font-size: 11px;
+	line-height: 1;
+	font-weight: bold;
+}
+
+#explanation-layers label {
+	position: absolute;
+	padding-top: 0.25em;
+	left: 67px;
+}
+#explanation-layers .layer-toggle-name label {
+	left: 85px;
+	cursor: pointer;
+}
+#explanation-layers .layer-toggle-name-indent label {
+	left: 107px;
+}
+#explanation-layers div {
+	padding-bottom: 1em;
+}
+
+/* details tabs styles */
+#explanation-details-wrapper {
+	position: relative;
+	height: 100%;
+}
+
+#explanation-details {
+	overflow: hidden;
+	padding: 0;
+	top: 90px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 298px;
+}
+
+#explanation-details .explanation-details-popup {
+	border-bottom: 1px solid gray;
+	clear: both;
+	position: relative;
+	overflow-x: hidden;
+}
+
+#explanation-details .explanation-details-popup:hover {
+	background-color: #e8e8e8;
+}
+
+#explanation-details-tabs {
+	font-size: 10px;
+}
+
+#explanation-details-tabs li a {
+	padding: 0.25em 0.75em;
+}
+
+#explanation-details-tabs li a img {
+	border: none;
+}
+
+.explanation-details-popup-legend {
+    font-size: 10px;
+    margin-left: 1em!important;
+}
+
+td.explanation-details-popup-legend-box {
+    border: 1px solid black!important;
+    margin-right: 1em!important;
+}
+
+
+.explanation-details-layer-fixed {
+	position: absolute;
+	width: 296px;
+	padding: 0!important;
+	background: #ffffff;
+	z-index: 1;
+}
+.explanation-details-layer-description-title {
+	font-weight: bold;
+	font-size: 1.5em;
+	text-align: center;
+	border-bottom: 1px solid gray;
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+.explanation-details-layer-description {
+	padding-top: 1em;
+	padding-right: 1.5em;
+	padding-left: 1.5em;
+	text-align: justify;
+	border-bottom: 1px solid gray;
+}
+.explanation-details-layer-holder>.explanation-details-layer-description {
+    padding-right: 0.2em;
+}
+.explanation-details-layer-description-hidden {
+	visibility: hidden;
+	position: relative;
+}
+.explanation-details-layer-description-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.explanation-details-layer-description-toggle-container {
+    position: relative;
+}
+
+.explanation-details-layer-nopad {
+	padding: 0!important;
+	position: absolute;
+	top: 62px;
+	bottom: 0;
+	font-size: 10px;
+}
+
+.explanation-details-layer-nopad>div {
+	padding-right: 1.3em;
+}
+
+.explanation-details-layer-holder-container {
+	position: relative;
+	height: 100%;
+	padding: 0!important;
+}
+
+.explanation-details-layer-holder {
+	padding: 0;
+	overflow: auto;
+	width: 296px;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.explanation-details-layer-holder .explanation-details-popup-header {
+	display: none;
+}
+
+.explanation-details-popup .explanation-details-popup-info {
+	color: black;
+}
+
+.explanation-details-popup .explanation-details-popup-name {
+	color: #dd8c01;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.explanation-details-popup td, .explanation-details-popup table {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.explanation-details-popup p {
+	margin: 1em 0;
+}
+
+.explanation-details-popup table {
+	padding: 1em;
+    line-height: 1.2em;
+}
+
+/*.explanation-details-popup a {
+	color: black;
+}*/
+.explanation-details-layer-description a,
+.explanation-details-layer-description a:link,
+.explanation-details-layer-description a:hover,
+.explanation-details-layer-description a:visited,
+.explanation-details-popup a,
+.explanation-details-popup a:link,
+.explanation-details-popup a:hover,
+.explanation-details-popup a:visited {
+	color: #4587b4;
+    text-decoration: underline;
+}
+
+.explanation-details-popup-photo img {
+	height: 75px;
+	width: 112.5px;
+}
+
+ul, ol {
+	padding-left: 2em;
+}
+
+/* map styles */
+#map {
+    height: 100%;
+	position: absolute;
+	left: 300px;
+	bottom: 0;
+	right: 0;
+}
+
+/* map tooltip styles */
+#tt {position:absolute; display:block}
+#tttop {display:block; height:5px; margin-left:5px; overflow:hidden}
+#ttcont {display:block; padding:2px 12px 3px 7px; margin-left:5px; background:white; color:black; font-size:small; border: 1px solid black}
+#ttbot {display:block; height:5px; margin-left:5px; overflow:hidden}
+
+/* map static popup styles */
+#map-popup-static {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 318px;
+	display: none;
+	background-color: white;
+	border: 1px solid black;
+	border-bottom-left-radius: 1em;
+}
+#map-popup-static-container .explanation-details-popup {
+	border-top: none;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#map-popup-static-close {
+	float: right;
+	cursor: pointer;
+	border: none;
+	border-top: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+}
+
+.clearfix:before, .clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+.ui-state-active, .ui-widget-content .ui-state-active {
+	background: #dadada url(//code.jquery.com/ui/1.10.0/themes/smoothness/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
+}
+#map>div>div.gmnoprint:last-of-type {
+	padding-top: 25px;
+	margin-top: -25px;
+}
+#map>div>div.gmnoprint:last-of-type>div>div:last-of-type {
+	margin-top: 15px;
+}

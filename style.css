@@ -1,0 +1,317 @@
+/*
+
+Theme Name: Watershed View
+
+Theme URI: http://watershedview.com
+
+Description: Watershed View homepage with blog and interactive map capabilities.
+
+Version: 0.1
+
+Author: Jeff Meadows
+
+Template: twentythirteen
+
+Tags: map
+
+*/
+
+@import url("../twentythirteen/style.css");
+
+html,
+button,
+input,
+select,
+textarea,
+div, span, p,
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif!important;
+}
+
+header a, header a:active, header a:hover {
+	text-decoration: none;
+}
+
+header h1, header h2, header h1 a, header h2 a, header h1 a:visited, header h2 a:visited, header h1 a:hover, header h2 a:hover {
+	padding: 0;
+	margin: 0;
+	color: rgb(114, 175, 182);
+	text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif!important;
+}
+
+a, a:visited, a:hover, a:link {
+	/*text-decoration: none;*/
+	color: inherit;
+}
+
+#wv-header-tab-bar {
+    display: none;
+}
+
+.wv-header-tab-bar {
+    width: 100%;
+   	display: none;
+    font-size: 10px;
+   	font-weight: bold;
+	background-color: rgb(78, 138, 190);
+	color: white;
+}
+.wv-header-tab-bar div.wv-logo {
+    text-align: center;
+	display: inline-block;
+	padding: 1em;
+	max-width: 17%;
+}
+.wv-header-tab-bar img {
+	max-width: 60px;
+	max-height: 60px;
+}
+.wv-header-tab-bar h6 {
+	padding: 0 2em;
+	margin: 2em 0;
+	font-size: 10px;
+}
+
+.wv-header-tab-bar p {
+    margin-bottom: 0;
+    margin-top: 1em;
+}
+.wv-header-tab-bar p:last-of-type, .wv-header-tab-bar p:first-of-type {
+    margin: 0;
+}
+
+.clearfix-contain:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix-contain {
+	overflow: hidden;
+	display: inline-block;
+}
+
+.wv-header-toggle {
+	position: relative;
+    top: 5px;
+	width: 12em;
+	z-index: 2;
+	background-color: rgb(78, 138, 190);
+	color: white;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+    font-size: 14px;
+    border-radius: 0 0 2em 2em;
+    float: right;
+}
+.wv-header-toggle:first-of-type {
+    border-radius: 2em 0 2em 2em;
+    margin-right: 2em;
+}
+.wv-header-toggle:last-of-type {
+    border-radius: 0 2em 2em 2em;
+}
+
+header aside.widget {
+	color: black;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 10px 0;
+	border-right: 1px solid white;
+	height: 85%;
+	margin-bottom: 31px;
+	font-size: 11px;
+	background: transparent;
+}
+
+header aside.widget .widget-title {
+	font-size: 14px;
+}
+
+header aside.widget:last-of-type {
+	border: none;
+	height: auto;
+	margin: 0;
+}
+
+header aside.widget p {
+	margin: 0;
+}
+
+#tertiary {
+	width: 100%;
+	background-color: rgb(78, 138, 190);
+}
+
+.wv-header-colorbar {
+	width: 100%;
+	height: 10px;
+	position: relative;
+	clear: both;
+	background-color: rgb(78, 138, 190);
+	color: white;
+    z-index: 1;
+}
+
+.wv-header-tab-bar {
+    position: relative;
+    z-index: 1;
+}
+
+.wv-header-titlebar {
+	width: 100%;
+	position: relative;
+	clear: both;
+	color: #df6608;
+	background-color: white;
+}
+
+.wv-header-menubar {
+	width: 100%;
+	position: relative;
+	clear: both;
+	background: #cadfe0 url('assets/img/backgrounds/menubar_45.png') repeat-x bottom left;
+	color: rgb(78, 138, 190);
+	font-weight: bold;
+}
+
+.wv-header-menubar .main-navigation {
+	margin: 0;
+}
+
+.wv-header-menubar .nav-menu li a {
+	color: rgb(78, 138, 190);
+	/*border-left: 1px solid white;*/
+}
+.wv-header-menubar .nav-menu li:last-of-type a {
+	/*border-right: 1px solid white;*/
+}
+
+.wv-header-menubar .nav-menu li:hover > a, .wv-header-menubar .nav-menu li a:hover {
+	background: transparent url('assets/img/backgrounds/menubar_hover_45.png') repeat-x bottom left;
+	color: rgb(78, 138, 190);
+}
+
+.wv-header-menubar .nav-menu .sub-menu, .wv-header-menubar .nav-menu .children {
+	background: #e0e9ee;
+	border: none;
+}
+
+.wv-header-menubar .nav-menu .sub-menu li:hover > a, .wv-header-menubar .nav-menu .sub-menu li a:hover {
+	background: #9ca7ad;
+} 
+
+html, body, #page {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	height: 70%;
+	position: relative;
+}
+
+
+
+footer aside.widget {
+	color: black;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 10px 0;
+	border-right: 1px solid white;
+	height: 85%;
+	margin-bottom: 31px;
+	font-size: 14px;
+    text-align: center;
+}
+
+footer aside.widget .widget-title {
+	font-size: 14px;
+}
+
+footer aside.widget:last-of-type {
+	border: none;
+	height: auto;
+	margin: 10px 0;
+}
+
+footer aside.widget p {
+	margin: 0;
+}
+
+#secondary {
+	background: #80561b url('assets/img/backgrounds/footerbar_153.png') repeat-x bottom left;
+	color: white;
+	padding: 0;
+}
+
+footer {
+	background-color: rgb(218, 199, 147)!important;
+}
+
+.site-info {
+	padding: 0;
+	text-align: center;
+    font-size: 12px;
+}
+.site-info a, .site-info a:visited, .site-info a:link, .site-info a:hover {
+    text-decoration: underline;
+}
+.footer-info {
+    font-size: 10px;
+}
+
+.sidebar .site-footer .flexible-widget-area {
+	max-width: 1040px;
+	left: 0;
+}
+
+/* Flexible widget areas - number of widgets per row (1, 2, 3 or 4) changes depending on number of widgets used */
+.flexible-widget-area .widget {
+	margin: 20px 0;
+	float: left;
+	width: 100%;
+	padding: 0 15px;
+}
+.flexible-widget-area.widget-count-1 .widget {
+	padding: 0;
+}
+/* Two per row */
+.flexible-widget-area.per-row-2 .widget {
+    width: 50%;
+}
+.flexible-widget-area.per-row-2 .widget:nth-of-type(2n+1) {
+	clear: left;
+	padding-left: 0;
+}
+.flexible-widget-area.per-row-2 .widget:nth-of-type(2n) {
+	padding-right: 0;
+}
+/* Three per row */
+.flexible-widget-area.per-row-3 .widget {
+    width: 33.33333%;
+}
+.flexible-widget-area.per-row-3 .widget:nth-of-type(3n+1) {
+	clear: left;
+	padding-left: 0;
+}
+.flexible-widget-area.per-row-3 .widget:nth-of-type(3n) {
+	padding-right: 0;
+}
+/* Four per row */
+.flexible-widget-area.per-row-4 .widget {
+    width: 25%;
+}
+.flexible-widget-area.per-row-4 .widget:nth-of-type(4n+1) {
+	clear: left;
+	padding-left: 0;
+}
+.flexible-widget-area.per-row-4 .widget:nth-of-type(4n) {
+	padding-right: 0;
+}

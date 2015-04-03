@@ -1,0 +1,37 @@
+<div class="ws-map-explanation">
+    <div data-accordion data-close-others="true">
+        <div data-accordion-group data-is-open="layerPanelOpen" data-heading="Layers">
+            <ul class="ws-layers">
+                <li data-ws-layer-li data-ng-repeat="layer for layer in layers"></li>
+                <li>
+                    <!-- Select All -->
+                </li>
+            </ul>
+        </div>
+        <div data-accordion-group data-is-open="detailsPanelOpen" data-header="Details">
+            <div data-tabset>
+                <div data-tab data-ng-repeat="layer for layer in layers" data-heading="layer.icon">
+                    <div class="explanation-details-layer-fixed" data-ng-if="!!layer.description">
+                        <div class="explanation-details-layer-description-title">{{layer.title}}</div>
+                        <div class="explanation-details-layer-description-toggle-container">
+                            <div class="explanation-details-layer-description-toggle"><i class="icon-chevron-up"></i></div>
+                        </div>
+                        <div class="explanation-details-layer-description">
+                            {{layer.description}}
+                        </div>
+                    </div>
+                    <div class="explanation-details-layer-holder clearfix">
+                        <div class="explanation-details-layer-description-title explanation-details-description-hidden">
+                            {{layer.title}}
+                        </div>
+                        <div class="explanation-details-layer-description explanation-details-description-hidden">
+                            {{layer.description}}
+                        </div>
+                        <span class="explanation-details-layer-details"></span>
+                        <div class="explanation-details-layer-description">{{layer.bottomDescription}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
